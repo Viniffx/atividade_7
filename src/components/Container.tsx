@@ -1,18 +1,19 @@
+import type { ReactNode, CSSProperties } from "react";
 
-const Container = ({ children }) => {
-  return (
-    <div style={styles.container}>
-      {children}
-    </div>
-  );
+type Props = {
+  children: ReactNode;
 };
 
-const styles = {
+const Container = ({ children }: Props) => {
+  return <div style={styles.container}>{children}</div>;
+};
+
+const styles: { container: CSSProperties } = {
   container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };
 
